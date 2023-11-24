@@ -116,17 +116,51 @@
                     <input type="date" id="checkout">
                 </div>
 
-                <input type="number" placeholder="Number of guests" class="guest-input">
+                <input type="number" min="1" max="4" placeholder="Number of guests (1 - 4)" class="guest-input">
                 <button type="submit" class="submit-button">Make Reservation</button>
             </div>
-            <section class="display-reservations">
 
+            <section class="display-reservations">
+                <table>
+                    <caption>Current Reservations</caption>
+
+                    <tr>
+                        <th>Number of guests</th>
+                        <th>Check-In Date</th>
+                        <th>Check-Out Date</th>
+                    </tr>
+
+                    <tr>
+                        <td data-cell="number">4</td>
+                        <td data-cell="checkin-date">01/25/2024</td>
+                        <td data-cell="checkout-date">01/30/2024</td>
+                    </tr>
+
+                    <tr>
+                        <td data-cell="number">2</td>
+                        <td data-cell="checkin-date">02/02/2024</td>
+                        <td data-cell="checkout-date">05/02/2024</td>
+                    </tr>
+
+                    <tr>
+                        <td data-cell="number">3</td>
+                        <td data-cell="checkin-date">09/04/2024</td>
+                        <td data-cell="checkout-date">12/04/2024</td>
+                    </tr>
+                    <tr>
+                        <td data-cell="number">2</td>
+                        <td data-cell="checkin-date">02/02/2024</td>
+                        <td data-cell="checkout-date">05/02/2024</td>
+                    </tr>
+
+                    <tr>
+                        <td data-cell="number">3</td>
+                        <td data-cell="checkin-date">09/04/2024</td>
+                        <td data-cell="checkout-date">12/04/2024</td>
+                    </tr>
+                </table>
             </section>
         </section>
-
-        <hr class="separator"/>
-
-        
 
     </main>
 

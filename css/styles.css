@@ -115,7 +115,7 @@ a{
     display: flex;
     flex-direction: column;
     align-items: start;
-    gap: 50px;
+    gap: 25px;
 }
 
 /* === Image Slider === */
@@ -236,6 +236,10 @@ a{
     background-size: cover;
 }
 
+.characteristic-text{
+    font-weight: 600;
+}
+
 .wifi{
     background-image: url(../images/wifi-icon.svg);
 }
@@ -250,4 +254,51 @@ a{
 
 .air{
     background-image: url(../images/snowflake-icon.svg);
+}
+
+
+/* Reservation Form */
+
+.reservation-form{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+
+    max-width: 350px;
+}
+
+.reservation-form label{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: var(--green);
+}
+
+input[type="date"]{
+    width: 100%;
+}
+
+.reservation-form input{
+    height: 30px;
+    padding: 5px 10px;
+
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.checkin{
+    flex-grow: 1;
+    flex-basis: 150px;
+}
+
+.checkout{
+    flex-grow: 1;
+    flex-basis: 150px;
+}
+
+.guest-input{
+    flex-grow: 3;
+    flex-basis: 300px;
 }

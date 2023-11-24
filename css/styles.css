@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+/* Global Variables */
+:root{
+    --red: #7EA16B;
+    --violet: #444054;
+}
+
+/* Set alternative box model to all elements */
+html{
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+/* Nav Bar */
+
+.navbar-container{
+    width: 100%;
+    border-bottom: 5px solid var(--violet);
+}
+
+.navbar{
+    width: 60%;
+    margin: 15px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo{
+    font-size: 3.5rem;
+    margin: 0;
+    color: var(--red);
+}
+
+.search-bar{
+    height: 40px;
+    width: 500px;
+    padding: 10px 20px;
+
+    font-size: 1rem;
+
+    border-radius: 20px;
+    border: 1px solid black;
+    box-shadow: 1px 1px 1px gray;
+}
+
+.navbar-links{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.home-link{
+    text-decoration: none;
+    color: black;
+
+    font-size: 1.25rem;
+}
+
+.btn{
+    background-color: transparent;
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-size: cover;
+    border: none;
+}
+
+.notifications-button{
+    background-image: url(../images/notif-icon.svg);
+}
+
+.profile-button{
+    background-image: url(../images/user-icon.svg);
+}

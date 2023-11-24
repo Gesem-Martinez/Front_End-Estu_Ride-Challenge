@@ -1,4 +1,5 @@
 import { changeImage } from "./slider.js";
+import { Reservation, validateReservationDates } from "./reservation.js";
 
 //Get button elements from image slider
 const buttons = document.querySelectorAll("[data-slider-button]");
@@ -16,4 +17,22 @@ buttons.forEach(button => {
         
         changeImage(direction, slides);
     })
+});
+
+
+let reservations = [];
+const submitButton = document.querySelector("[data-submit]");
+
+submitButton.addEventListener('click', (event) => {
+    let checkinDate = document.querySelector("#checkin").value;
+    let checkoutDate = document.querySelector("#checkout").value;
+    let guestNumber = document.querySelector("#guestNumber").value;
+
+    if(validateReservationDates(checkinDate, checkoutDate, reservations)){
+        let reservation = new Reservation(checkinDate, checkoutDate, guestNumber);
+        reservations.push(reservation);
+        console.log(reservations);
+    }
+
+    event.preventDefault();
 });

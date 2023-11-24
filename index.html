@@ -108,16 +108,16 @@
             <div class="reservation-form">
                 <div class="checkin">
                     <label for="checkin">Check-In</label>
-                    <input type="date" id="checkin">
+                    <input type="date" id="checkin" required>
                 </div>
 
                 <div class="checkout">
                     <label for="checkout">Check-Out</label>
-                    <input type="date" id="checkout">
+                    <input type="date" id="checkout" required>
                 </div>
 
-                <input type="number" min="1" max="4" placeholder="Number of guests (1 - 4)" class="guest-input">
-                <button type="submit" class="submit-button">Make Reservation</button>
+                <input id="guestNumber" type="number" min="1" max="4" placeholder="Number of guests (1 - 4)" class="guest-input" required>
+                <button type="submit" class="submit-button" data-submit>Make Reservation</button>
             </div>
 
             <section class="display-reservations">

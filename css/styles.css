@@ -101,7 +101,7 @@ a{
 
 /* Main */
 .main-container{
-    width: 50%;
+    max-width: 50%;
     margin: 15px auto;
 
     display: flex;
@@ -173,4 +173,32 @@ a{
 
 .slider-button.next{
     right: 10px;
+}
+
+/* Host Info */
+.host-info{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.host-img{
+    height: 100px;
+    width: 100px;
+
+    background-image: url(../images/profile-picture.jpg);
+    background-size: cover;
+    background-position: center;
+
+    border-radius: 50%;
+}
+
+.host-name{
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.host-time{
+    font-size: 1rem;
+    font-weight: 400;
 }

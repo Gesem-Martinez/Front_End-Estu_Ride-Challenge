@@ -286,6 +286,8 @@ input[type="date"]{
     border: 1px solid black;
     border-radius: 15px;
     background-color: white;
+
+    font-size: 1rem;
 }
 
 .checkin{
@@ -301,4 +303,21 @@ input[type="date"]{
 .guest-input{
     flex-grow: 3;
     flex-basis: 300px;
+
+    padding: 5px 10px;
+}
+
+.submit-button{
+    flex-grow: 3;
+    flex-basis: 300px;
+
+    font-size: 1.3rem;
+    color: white;
+    font-weight: 700;
+    padding: 10px 20px;
+
+    
+    background-color: var(--green);
+    border: 1px solid black;
+    border-radius: 16px;
 }

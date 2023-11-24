@@ -1,6 +1,7 @@
 import { changeImage } from "./slider.js";
 import { Reservation } from "./reservation.js";
 import { validateReservationDates } from "./validations.js";
+import {displayReservation} from "./display.js";
 
 //Get button elements from image slider
 const buttons = document.querySelectorAll("[data-slider-button]");
@@ -33,6 +34,8 @@ submitButton.addEventListener('click', (event) => {
         let reservation = new Reservation(checkinDate, checkoutDate, guestNumber);
         reservations.push(reservation);
         console.log(reservations);
+
+        displayReservation(reservations);
     }
 
     event.preventDefault();

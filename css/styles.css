@@ -98,15 +98,24 @@ a{
 }
 
 
+.separator{
+    border: 0;
+    clear:both;
+    display:block;
+    width: 100%;               
+    background-color:var(--gray);
+    height: 1px;
+}
 
 /* Main */
 .main-container{
-    max-width: 50%;
+    width: 50%;
     margin: 15px auto;
 
     display: flex;
     flex-direction: column;
     align-items: start;
+    gap: 50px;
 }
 
 /* === Image Slider === */
@@ -126,8 +135,6 @@ a{
     list-style: none;
 }
 
-
-
 .img-slide{
     position: absolute;
     inset: 0;
@@ -135,8 +142,8 @@ a{
 }
 
 .img-slide > img{
+    height: 700px;
     width: 100%;
-    height: auto;
     object-fit: cover;
     object-position: center;
 }
@@ -144,8 +151,6 @@ a{
 .img-slide[data-active]{
     opacity: 1;
 }
-
-
 
 .slider-button{
     position: absolute;
@@ -176,6 +181,13 @@ a{
 }
 
 /* Host Info */
+.house-info{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .host-info{
     display: flex;
     gap: 20px;
@@ -196,9 +208,46 @@ a{
 .host-name{
     font-size: 1.3rem;
     font-weight: 600;
+    color: var(--green);
 }
 
 .host-time{
+    color: var(--gray);
     font-size: 1rem;
     font-weight: 400;
+}
+
+.house-characteristics{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 50px;
+}
+
+.characteristic-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.characteristic-icon{
+    width: 3rem;
+    height: 3rem;
+    background-position: center;
+    background-size: cover;
+}
+
+.wifi{
+    background-image: url(../images/wifi-icon.svg);
+}
+
+.lake{
+    background-image: url(../images/lake-icon.svg);
+}
+
+.tv{
+    background-image: url(../images/tv-icon.svg);
+}
+
+.air{
+    background-image: url(../images/snowflake-icon.svg);
 }

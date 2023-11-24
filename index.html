@@ -9,6 +9,15 @@
 </head>
 
 <body>
+
+    <dialog>
+        <div class="dialog-div" data-dialog-div>
+            <div class="dialog-icon" ><img src="" alt="" data-dialog-icon></div>
+            <p class="dialog-message" data-dialog-message></p>
+            <button class="dialog-close" data-dialog-close>Close</button>
+        </div>
+    </dialog>
+
     <div class="navbar-container">
         <header class="navbar">
             <a href="#" class="logo">Lofti</a>
@@ -17,13 +26,14 @@
 
             <div class="navbar-links">
                 <a href="#" class="home-link">Home</a>
-                <button class="notifications-button btn"></button>
-                <button class="profile-button btn"></button>
+                <button class="notifications-button nav-btn"></button>
+                <button class="profile-button nav-btn"></button>
             </div>
         </header>
     </div>
 
     <main class="main-container">
+
         <h1 class="house-name">Stunning A-Frame Home on Canyon Lake</h1>
 
         <div class="img-slider">
@@ -54,13 +64,13 @@
 
         </div>
 
-        <hr class="separator"/>
+        <hr class="separator" />
 
         <section class="house-info">
             <div class="host-info">
                 <div class="host-img">
                 </div>
-    
+
                 <p class="host-name">Host: Gesem Martinez <br><span class="host-time">Host for 3 years</span></p>
             </div>
 
@@ -87,7 +97,7 @@
             </div>
         </section>
 
-        <hr class="separator"/>
+        <hr class="separator" />
 
         <section class="house-description">
             <h2>House Description:</h2>
@@ -102,7 +112,8 @@
             <a href="#">Show More</a>
         </section>
 
-        <hr class="separator"/>
+        <hr class="separator" />
+
 
         <section class="reservations">
             <div class="reservation-form">
@@ -116,7 +127,8 @@
                     <input type="date" id="checkout" required>
                 </div>
 
-                <input id="guestNumber" type="number" min="1" max="4" placeholder="Number of guests (1 - 4)" class="guest-input" required>
+                <input id="guestNumber" type="number" min="1" max="4" placeholder="Number of guests (1 - 4)"
+                    class="guest-input" required>
                 <button type="submit" class="submit-button" data-submit>Make Reservation</button>
             </div>
 
@@ -163,7 +175,6 @@
         </section>
 
     </main>
-
 
     <script src="./src/index.js" type="module"></script>
 </body>

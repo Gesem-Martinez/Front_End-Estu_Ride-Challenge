@@ -76,17 +76,17 @@ a{
     font-size: 1.25rem;
 }
 
-.btn{
+button:hover{
+    cursor: pointer;    
+}
+
+.nav-btn{
     background-color: transparent;
     width: 30px;
     height: 30px;
     background-position: center;
     background-size: cover;
     border: none;
-}
-
-.btn:hover{
-    cursor: pointer;
 }
 
 .notifications-button{
@@ -291,7 +291,7 @@ input[type="date"]{
 }
 
 .reservation-form input{
-    height: 30px;
+    height: 40px;
     padding: 5px 10px;
 
     border: 1px solid black;
@@ -353,4 +353,72 @@ th,
 td{
    font-size: 1.2rem;
    padding: 1rem; 
+}
+
+
+/* Dialog for reservation output */
+dialog::backdrop {
+    background: rgb(0, 0, 0);
+    opacity: 0.5;
+}
+
+dialog{
+    width: 40%;
+    height: max-content;
+
+    border: 1px solid black;
+    border-radius: 16px;
+
+    z-index: 1;
+}
+
+.dialog-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+    padding: 30px 15px 15px 15px;
+
+    border-radius: 16px;
+}
+
+.dialog-icon{
+    width: 200px;
+    height: 200px;
+}
+
+.dialog-icon img{
+    width: 100%;
+    height: auto;
+}
+
+.dialog-message{
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.dialog-close{
+    width: 300px;
+    height: 40px;
+
+    background-color: white;
+    border: 1px solid var(--gray);
+    font-size: 1.3rem;
+    border-radius: 25px;
+    padding: 10px 0;
+}
+
+.dialog-close:hover{
+    box-shadow: 1px 1px 1px var(--gray);
+}
+
+.error-message{
+    background-color: rgba(255, 150, 150, 0.5);
+    border: 1px solid red;
+}
+
+.success-message{
+    background-color: rgba(150, 255, 150, 0.5);
+    border: 1px solid green;
 }

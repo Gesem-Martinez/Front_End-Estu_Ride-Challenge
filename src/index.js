@@ -29,7 +29,7 @@ submitButton.addEventListener('click', (event) => {
     let checkoutDate = document.querySelector("#checkout").value;
     let guestNumber = document.querySelector("#guestNumber").value;
 
-    if(validateReservationDates(checkinDate, checkoutDate, reservations)){
+    if(validateReservationDates(checkinDate, checkoutDate, reservations, guestNumber)){
         let reservation = new Reservation(checkinDate, checkoutDate, guestNumber);
         reservations.push(reservation);
         console.log(reservations);

@@ -2,8 +2,8 @@
 
 /* Global Variables */
 :root{
-    --red: #7EA16B;
-    --violet: #444054;
+    --green: #7EA16B;
+    --gray: #596869;
 }
 
 /* Set alternative box model to all elements */
@@ -19,15 +19,20 @@ html{
     box-sizing: inherit;
 }
 
+body{
+    margin: 0;
+}
+
 /* Nav Bar */
 
 .navbar-container{
     width: 100%;
-    border-bottom: 5px solid var(--violet);
+    border-bottom: 1px solid var(--gray);
+    box-shadow: 0 2px 2px -2px var(--gray);
 }
 
 .navbar{
-    width: 60%;
+    width: 70%;
     margin: 15px auto;
     display: flex;
     justify-content: space-between;
@@ -35,22 +40,28 @@ html{
     gap: 20px;
 }
 
+a{
+    text-decoration: none;
+}
+
 .logo{
     font-size: 3.5rem;
+    font-weight: 700;
+
     margin: 0;
-    color: var(--red);
+    color: var(--green);
 }
 
 .search-bar{
     height: 40px;
-    width: 500px;
+    width: 300px;
     padding: 10px 20px;
 
     font-size: 1rem;
 
     border-radius: 20px;
-    border: 1px solid black;
-    box-shadow: 1px 1px 1px gray;
+    border: 1px solid var(--gray);
+    box-shadow: 1px 1px 1px var(--gray);
 }
 
 .navbar-links{
@@ -60,7 +71,6 @@ html{
 }
 
 .home-link{
-    text-decoration: none;
     color: black;
 
     font-size: 1.25rem;
@@ -75,10 +85,26 @@ html{
     border: none;
 }
 
+.btn:hover{
+    cursor: pointer;
+}
+
 .notifications-button{
     background-image: url(../images/notif-icon.svg);
 }
 
 .profile-button{
     background-image: url(../images/user-icon.svg);
+}
+
+
+
+/* Main */
+.main-container{
+    width: 70%;
+    margin: 15px auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
 }

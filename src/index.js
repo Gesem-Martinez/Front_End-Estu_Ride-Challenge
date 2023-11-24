@@ -1,5 +1,6 @@
 import { changeImage } from "./slider.js";
-import { Reservation, validateReservationDates } from "./reservation.js";
+import { Reservation } from "./reservation.js";
+import { validateReservationDates } from "./validations.js";
 
 //Get button elements from image slider
 const buttons = document.querySelectorAll("[data-slider-button]");

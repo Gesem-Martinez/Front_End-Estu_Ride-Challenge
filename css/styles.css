@@ -422,3 +422,76 @@ dialog{
     background-color: rgba(150, 255, 150, 0.5);
     border: 1px solid green;
 }
+
+/* Weather Display */
+
+.weather-display{
+    background-color: #4a8dfe;
+    width: 100%;
+    margin: 0;
+    padding: 10px 20px;
+    border-radius: 16px;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.weather-heading{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    border-bottom: 2px solid white;
+}
+
+.weather-heading-icon{
+    width: 4rem;
+    height: 4rem;
+
+    background-image: url(../images/weather-icon.svg);
+    background-size: cover;
+    background-position: center;
+}
+
+.weather-heading-title{
+    font-size: 2rem;
+}
+
+.weather-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+.weather-location{
+    grid-column: 1 / 2;
+}
+
+.weather-location-text{
+    font-size: 3rem;
+    margin: 0;
+}
+
+.weather-condition{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+}
+
+.weather-condition p{
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 30px 0;
+}
+
+.weather-extras p{
+    text-align: end;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 30px 0;
+} 

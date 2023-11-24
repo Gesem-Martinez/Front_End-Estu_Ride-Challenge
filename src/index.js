@@ -2,6 +2,7 @@ import { changeImage } from "./slider.js";
 import { Reservation } from "./reservation.js";
 import { validateReservationDates } from "./validations.js";
 import {displayReservation} from "./display.js";
+import { getWeatherData } from "./weather.js";
 
 //Get button elements from image slider
 const buttons = document.querySelectorAll("[data-slider-button]");
@@ -40,3 +41,5 @@ submitButton.addEventListener('click', (event) => {
 
     event.preventDefault();
 });
+
+getWeatherData();

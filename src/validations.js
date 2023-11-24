@@ -1,5 +1,6 @@
 import { displayMessage } from "./display.js";
 
+//Check if the check-in and check-out dates are valid
 function validateReservationDates(checkinDate, checkoutDate, reservationsArray, guestNumber) {
     let currentDate = new Date();
     let newReservationCheckin = new Date(checkinDate);
@@ -8,6 +9,7 @@ function validateReservationDates(checkinDate, checkoutDate, reservationsArray, 
     let passed = true;
     let message = "Reservation Succesful!";
 
+    //Validate input values
     if (checkinDate === "" || checkoutDate === "" || guestNumber === "") {
         message = "Error: Empty values";
         passed = false;
@@ -22,6 +24,7 @@ function validateReservationDates(checkinDate, checkoutDate, reservationsArray, 
         passed = false;
     }
 
+    //Compare new reservation to current ones to check for conflicts
     for (let reservation of reservationsArray) {
         if (newReservationCheckin <= reservation.checkoutDate && newReservationCheckout >= reservation.checkinDate) {
             message = "Invalid dates: Reservation conflicts with existing ones.";
@@ -30,11 +33,13 @@ function validateReservationDates(checkinDate, checkoutDate, reservationsArray, 
         }
     }
 
+    //If there is any conflict, display error message in the dialog element
     if(!passed){
         displayMessage(message, "error");
         return false;
     }
 
+    //If there are no conflicts, display success message
     displayMessage(message, "success");
     return true;
 

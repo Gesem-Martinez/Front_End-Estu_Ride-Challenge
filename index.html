@@ -10,6 +10,7 @@
 
 <body>
 
+    <!-- Dialog element to display success or error messages -->
     <dialog>
         <div class="dialog-div" data-dialog-div>
             <div class="dialog-icon" ><img src="" alt="" data-dialog-icon></div>
@@ -18,6 +19,7 @@
         </div>
     </dialog>
 
+    <!-- Top bar -->
     <div class="navbar-container">
         <header class="navbar">
             <a href="#" class="logo">Lofti</a>
@@ -32,10 +34,12 @@
         </header>
     </div>
 
+    <!-- Main Section for room information -->
     <main class="main-container">
 
         <h1 class="house-name">Stunning A-Frame Home on Canyon Lake</h1>
 
+        <!-- Image slider with buttons -->
         <div class="img-slider">
             <button class="slider-button prev" data-slider-button="prev">&#8612;</button>
             <button class="slider-button next" data-slider-button="next">&#8614;</button>
@@ -66,12 +70,11 @@
 
         <hr class="separator" />
 
+        <!-- Display current weather with WeatherAPI -->
         <section class="weather-display">
             <div class="weather-heading">
                 <div class="weather-heading-icon"></div>
                 <h2 class="weather-heading-title">Current Weather</h2>
-
-                <input type="text">
             </div>
 
             <div class="weather-info">
@@ -94,6 +97,7 @@
 
         <hr class="separator" />
 
+        <!-- Information about the host and house -->
         <section class="house-info">
             <div class="host-info">
                 <div class="host-img">
@@ -127,6 +131,7 @@
 
         <hr class="separator" />
 
+        <!-- Brief description about the house -->
         <section class="house-description">
             <h2>House Description:</h2>
             <p>Relax in this stunning Texas Hill Country A-Frame Cabin near the lake. You will enjoy this comfortable,
@@ -143,7 +148,10 @@
         <hr class="separator" />
 
 
+        <!-- Reservations section -->
         <section class="reservations">
+
+            <!-- Reservation Form -->
             <div class="reservation-form">
                 <div class="checkin">
                     <label for="checkin">Check-In</label>
@@ -160,6 +168,7 @@
                 <button type="submit" class="submit-button" data-submit>Make Reservation</button>
             </div>
 
+            <!-- Current Reservations -->
             <section class="display-reservations">
                 <table data-reservations-table>
                     <caption>Current Reservations</caption>

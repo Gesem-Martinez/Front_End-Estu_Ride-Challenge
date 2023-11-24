@@ -1,3 +1,4 @@
+//Get all weather display elements to fill
 const weatherDisplay = document.querySelector(".weather-display");
 const location = weatherDisplay.querySelector("[data-weather-location]");
 const conditionIcon = weatherDisplay.querySelector("[data-weather-icon]");
@@ -9,9 +10,12 @@ const feels = weatherDisplay.querySelector("[data-weather-feels]");
 
 
 async function getWeatherData(){
+
+    //Fetch the JSON data from the server
     const response = await fetch('http://api.weatherapi.com/v1/current.json?key=866165b923e84310b9624331232411&q=Guadalajara&aqi=no');
     const weatherData = await response.json();
 
+    //Populate weather display
     location.textContent = `${weatherData.location.name}, ${weatherData.location.country}`;
     conditionIcon.setAttribute("src", weatherData.current.condition.icon);
     conditionText.textContent = weatherData.current.condition.text;

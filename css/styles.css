@@ -101,10 +101,76 @@ a{
 
 /* Main */
 .main-container{
-    width: 70%;
+    width: 50%;
     margin: 15px auto;
 
     display: flex;
     flex-direction: column;
     align-items: start;
+}
+
+/* === Image Slider === */
+
+.img-slider{
+    width: 100%;
+    height: 700px;
+    position: relative;
+}
+
+.img-slider > ul{
+    margin: 0;
+    padding: 0;
+}
+
+.img-slider li{
+    list-style: none;
+}
+
+
+
+.img-slide{
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+}
+
+.img-slide > img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
+.img-slide[data-active]{
+    opacity: 1;
+}
+
+
+
+.slider-button{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: none;
+    font-size: 3rem;
+
+    top: 40%;
+    z-index: 1;
+    color: rgb(200, 200, 200);
+
+    cursor: pointer;
+    padding: 0 3px;
+}
+
+.slider-button:hover,
+.slider-button:focus{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);;
+}
+
+.slider-button.prev{
+    left: 10px;
+}
+
+.slider-button.next{
+    right: 10px;
 }

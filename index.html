@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lofti</title>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
+
 <body>
     <div class="navbar-container">
         <header class="navbar">
             <a href="#" class="logo">Lofti</a>
-    
+
             <input type="search" class="search-bar">
-    
+
             <div class="navbar-links">
                 <a href="#" class="home-link">Home</a>
                 <button class="notifications-button btn"></button>
@@ -20,42 +22,40 @@
             </div>
         </header>
     </div>
-    
+
     <main class="main-container">
         <h1 class="house-name">Stunning A-Frame Home on Canyon Lake</h1>
 
-        <section class="house-images">
-            <div class="img-slider">
-                <ul>
-                    <button class="slider-button prev">&#8612;</button>
-                    <button class="slider-button next">&#8614;</button>
+        <div class="img-slider">
+            <button class="slider-button prev" data-slider-button="prev">&#8612;</button>
+            <button class="slider-button next" data-slider-button="next">&#8614;</button>
 
-                    <li class="img-slide">
-                        <img src="./images/house-img-1.webp" alt="Front of the house">
-                    </li>
+            <ul data-img-slides>
+                <li class="img-slide" data-active>
+                    <img src="./images/house-img-1.webp" alt="Front of the house">
+                </li>
+    
+                <li class="img-slide">
+                    <img src="./images/house-img-2.webp" alt="Living room">
+                </li>
+    
+                <li class="img-slide">
+                    <img src="./images/house-img-3.webp" alt="Kitchen">
+                </li>
+    
+                <li class="img-slide">
+                    <img src="./images/house-img-4.webp" alt="Bathroom">
+                </li>
+    
+                <li class="img-slide">
+                    <img src="./images/house-img-5.webp" alt="Bedroom">
+                </li>
+            </ul>
 
-                    <li class="img-slide">
-                        <img src="./images/house-img-2.webp" alt="Living room">
-                    </li>
-
-                    <li class="img-slide">
-                        <img src="./images/house-img-3.webp" alt="Kitchen">
-                    </li>
-
-                    <li class="img-slide">
-                        <img src="./images/house-img-4.webp" alt="Bathroom">
-                    </li>
-
-                    <li class="img-slide">
-                        <img src="./images/house-img-5.webp" alt="Bedroom">
-                    </li>
-                </ul>
-
-            </div>
-        </section>
+        </div>
 
         <section class="host-info">
-            
+
         </section>
 
         <section class="house-description">
@@ -68,6 +68,7 @@
     </main>
 
 
-    <script src="./src/index.js"></script>
+    <script src="./src/index.js" type="module"></script>
 </body>
+
 </html>
